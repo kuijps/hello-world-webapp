@@ -5,26 +5,56 @@
     box-sizing: border-box;
   }
   
+  /* Spacey background and layout */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
-    transition: background-color 0.5s ease;
+    background: radial-gradient(ellipse at bottom, #0d0d2b 0%, #000000 100%);
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
   }
   
+  /* Glowing heading */
   h1 {
     font-size: 4rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    color: #c9f9ff;
+    text-shadow: 0 0 8px #00f0ff, 0 0 15px #00f0ff, 0 0 30px #00f0ff;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
   }
   
   h1:hover {
     transform: scale(1.1);
-    color: #fffa65;
+    text-shadow: 0 0 12px #fffa65, 0 0 25px #fffa65, 0 0 40px #fffa65;
   }
+  
+  /* Optional: twinkling star background */
+  body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/kentcdodds/starfield-animation/master/public/images/starfield.png') repeat;
+    opacity: 0.2;
+    z-index: 0;
+    animation: moveStars 100s linear infinite;
+  }
+  
+  h1 {
+    z-index: 1; /* keep text above stars */
+  }
+  
+  @keyframes moveStars {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 10000px 10000px;
+    }
+  }
+  
   
