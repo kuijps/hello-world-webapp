@@ -14,13 +14,10 @@ helloEl.addEventListener('click', () => {
 
 function getRandomGreeting() {
   const greetings = [
-    'Hello, Dove!',
-    'Hey there, monk!',
-    'What’s up, nisi?',
-    'Bonjour, duolingo fiend!',
-    'Hola, bug!',
-    '👋 Hello!',
-    'Greetings, AHE!'
+    'you are a horse! 🐎',
+    'i am not a horse!🙅🏻‍♂️',
+    'you are not a horse!🙅🏻‍♂️',
+    'i am a horse 🐎',
   ];
   return greetings[Math.floor(Math.random() * greetings.length)];
 }
