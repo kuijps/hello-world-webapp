@@ -34,7 +34,7 @@ jobs:
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy hello-world-webapp \
-            --image=northamerica-northeast2-docker.pkg.dev/vaulted-anthem-465400-d1/hello-world-webapp:latest \
+            --image=northamerica-northeast2-docker.pkg.dev/vaulted-anthem-465400-d1/hello-world-webapp-repo/hello-world-webapp:latest \
             --region=northamerica-northeast2 \
             --platform=managed \
             --allow-unauthenticated
